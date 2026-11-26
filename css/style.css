@@ -1,0 +1,623 @@
+
+/* ==============================
+   1. GLOBAL SETTINGS
+============================== */
+
+:root {
+    --navy: #101D32;
+    --white: #FFFFFF;
+    --blue:#3d5f8e;
+    --grey: #F2F5FA;
+    --text: #39465A;
+    --muted: #718096;
+    --border: #E2E8F0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 88%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    font-size: 2.4rem;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+.section-label {
+    color: #668BBF;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* ==============================
+   2. NAVIGATION
+============================== */
+
+header {
+    width: 100%;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--navy);
+}
+
+#nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+#nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+#nav-links a:hover {
+    color: #668BBF;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--navy);
+}
+
+/* ==============================
+   3. HOME SECTION
+============================== */
+
+#home {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #FFFFFF 60%, #F2F5FA);
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin: 15px 0;
+    color: var(--navy);
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    color: #668BBF;
+    margin-bottom: 18px;
+}
+
+.hero-text p {
+    color: var(--text);
+    max-width: 650px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: #263D5D;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid var(--navy);
+    color: var(--navy);
+}
+
+.btn-outline:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.social-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #526B8B;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.profile-placeholder {
+    width: 220px;
+    height: 220px;
+    min-width: 220px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 800;
+    border: 10px solid #E6EDF7;
+}
+
+/* ==============================
+   4. ABOUT SECTION
+============================== */
+
+#about {
+    background: var(--grey);
+}
+
+.about-content {
+    max-width: 850px;
+}
+
+.about-content p {
+    color: var(--text);
+    margin-bottom: 18px;
+    font-size: 1.02rem;
+}
+
+/* ==============================
+   5. EDUCATION SECTION
+============================== */
+
+.education-card {
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    border-left: 4px solid #8EAFDF;
+    border-radius: 8px;
+    background: var(--white);
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateX(6px);
+    box-shadow: 0 8px 25px rgba(16, 29, 50, 0.07);
+}
+
+.education-card h3 {
+    font-size: 1.2rem;
+    margin: 8px 0;
+}
+
+.education-card p {
+    color: var(--text);
+}
+
+.education-card .year {
+    color: #668BBF;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* ==============================
+   6. SKILLS SECTION
+============================== */
+
+#skills {
+    background: var(--grey);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.skill-card {
+    background: var(--white);
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(16, 29, 50, 0.07);
+}
+
+.skill-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: var(--text);
+    line-height: 2;
+}
+
+/* ==============================
+   7. PROJECTS SECTION
+============================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(16, 29, 50, 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin: 12px 0;
+}
+
+.project-card p {
+    color: var(--text);
+    font-size: 0.92rem;
+}
+
+.project-card > *:not(.project-number) {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.project-number {
+    background: var(--grey);
+    color: #668BBF;
+    padding: 18px 20px;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.project-tech {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #526B8B;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: 22px;
+    color: #426FAE;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+    color: var(--navy);
+}
+
+/* ==============================
+   8. CONTACT SECTION
+============================== */
+
+#contact {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+}
+
+#contact .section-label {
+    color: var(--blue);
+}
+
+#contact .section-heading {
+    color: var(--white);
+}
+
+#contact p {
+    color: #D0D9E8;
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: var(--blue);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    color: var(--white);
+}
+
+/* ==============================
+   9. FOOTER
+============================== */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #0B1525;
+    color: #C5D0E0;
+    font-size: 0.85rem;
+}
+
+/* ==============================
+   10. ANIMATIONS
+============================== */
+
+section {
+    animation: fadeIn 0.7s ease both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   11. RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 900px) {
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-placeholder {
+        width: 180px;
+        height: 180px;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        padding: 65px 0;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 10px 6%;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    #nav-links li {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .profile-placeholder {
+        width: 130px;
+        height: 130px;
+        min-width: 130px;
+        font-size: 2.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+}
+
+/* Refined Typography */
+
+body {
+    font-size: 14px;
+}
+
+.logo {
+    font-size: 1.05rem;
+}
+
+#nav-links a {
+    font-size: 0.82rem;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hero-text h2 {
+    font-size: 1.2rem;
+}
+
+.hero-text p,
+.about-content p {
+    font-size: 0.92rem;
+}
+
+.section-heading {
+    font-size: 2rem;
+}
+
+.section-label {
+    font-size: 0.72rem;
+}
+
+.education-card h3,
+.project-card h3 {
+    font-size: 1.05rem;
+}
+
+.skill-card h3 {
+    font-size: 0.95rem;
+}
+
+.skill-card p,
+.education-card p,
+.project-card p {
+    font-size: 0.85rem;
+}
+
+.btn {
+    font-size: 0.82rem;
+}
+
+.social-links a,
+.project-link,
+.contact-links a {
+    font-size: 0.82rem;
+}
+
+@media (max-width: 700px) {
+    .hero-text h1 {
+        font-size: 2.1rem;
+    }
+
+    .section-heading {
+        font-size: 1.7rem;
+    }
+}
+.section-heading h2 {
+    color: #3d5f8e;
+}
+.skill-tags span {
+    display: inline-block;
+    background-color: #EAF1FA;
+    color: #101D32;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #A9C8F4;
+    transition: 0.3s ease;
+}
+
+.skill-tags span:hover {
+    background-color: #A9C8F4;
+    color: #101D32;
+    transform: translateY(-3px);
+}
