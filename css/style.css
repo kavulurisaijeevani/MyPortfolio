@@ -621,3 +621,18 @@ body {
     color: #101D32;
     transform: translateY(-3px);
 }
+.hero-image .profile-placeholder {
+    width: 220px;
+    height: 220px;
+    min-width: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hero-image .profile-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
